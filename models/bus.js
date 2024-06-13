@@ -1,10 +1,9 @@
 const mongoose = require("mongoose")
 const schema = mongoose.Schema({
-    "name":String,
-    "phnno":String,
-    "gender":String,
-    "email":String,
-    "password":String
+    "bname":String,
+    "route":String,
+    "bno":String,
+    "dname":String,
 })
-let busmodel = mongoose.model("users",schema)
+let busmodel = mongoose.model("buses",schema)
 module.exports={busmodel}

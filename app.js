@@ -44,7 +44,7 @@ app.post("/signIn", (request, response) => {
         (data) => {
             if (data.length > 0) {
                 let dbPassword = data[0].password
-                // console.log(dbPassword)
+                console.log(dbPassword)
                 bcrypt.compare(input.password, dbPassword, (error, isMatch) => {
                     if (isMatch) {
                         jwt.sign({ email: input.email }, "ksrtc-app", { expiresIn: "1d" }, (error, token) => {
